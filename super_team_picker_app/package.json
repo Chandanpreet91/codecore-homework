@@ -5,11 +5,11 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "db:create":"createdb --echo super_team_picker",
-    "db:drop":"dropdb --if-exists --echo super_team_picker",
-    "db:migrate":"knex migrate:latest",
-    "db:rollback":"knex migrate:rollback",
-    "db:reset":"npm run db:drop && npm run db:create && npm run db:migrate"
+    "db:create": "createdb --echo super_team_picker",
+    "db:drop": "dropdb --if-exists --echo super_team_picker",
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "cookie-parser": "^1.4.5",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "faker": "^5.1.0",
     "knex": "^0.21.12",
     "method-override": "^3.0.0",
     "pg": "^8.5.0"
