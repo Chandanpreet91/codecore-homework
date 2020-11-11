@@ -1,0 +1,18 @@
+<%- include("./partials/header") %>
+
+<div class="card" style="width: 18rem;">
+  <img src="<%= cohort.logo_url %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= cohort.name %></h5>
+    <p class="card-text"><%= cohort.members %></p>
+    <div class="d-flex">
+      <a class="btn btn-warning mr-2" href="/cohorts/<%= cohort.id %>/edit">Edit</a>
+      <form action="/cohorts/<%= cohort.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE" />
+        <input type="submit" class="btn btn-danger" value="Delete" />
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include("./partials/footer") %>
